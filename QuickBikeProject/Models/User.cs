@@ -20,7 +20,6 @@ namespace QuickBikeProject.Models
         public bool Admin { get; set; }
         public int? MaHoSo { get; set; }
         public ICollection<HoaDon> HoaDon { get; set; }
-        public ICollection<Shift> Shift { get; set; }
         public HoSo HoSo { get; set; }
         
     }

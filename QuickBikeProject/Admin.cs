@@ -314,7 +314,7 @@ namespace QuickBikeProject
         private void searchBtn_Click(object sender, EventArgs e)
         {
             var dt = from hd in quickBikeDB.HoaDon
-                     where hd.NgayLap >= batDau.Value && hd.NgayLap <= ketThuc.Value
+                     where hd.NgayLap >= batDau.Value && hd.NgayLap <= ketThuc.Value && hd.TrangThai == "Da thanh toan"
                      orderby hd.NgayLap
                      group hd by EntityFunctions.TruncateTime(hd.NgayLap) into g
                      let tongDT = g.Sum(m => m.ThanhTien)

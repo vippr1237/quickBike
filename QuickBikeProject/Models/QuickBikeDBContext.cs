@@ -16,7 +16,6 @@ namespace QuickBikeProject.Models
         public DbSet<Bike> Bike { get; set; }
         public DbSet<User> User { get; set; }
         public DbSet<Guest> Guest { get; set; }
-        public DbSet<Shift> Shift { get; set; }
         public DbSet<DichVu> DichVu { get; set; }
         public DbSet<HoaDon> HoaDon { get; set; }
         public DbSet<HoSo> HoSo { get; set; }

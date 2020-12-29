@@ -15,13 +15,11 @@ namespace QuickBikeProject.Models
         public int? MaKH { get; set; }
         [Required]
         public string MaNV { get; set; }
-        public int MaCa { get; set; }
         public DateTime NgayLap { get; set; }
         public float ThanhTien { get; set; }
         public string TrangThai { get; set; }
         public ICollection<DichVu> DichVu { get; set; }
         public Guest Guest { get; set; }
         public User User { get; set; }
-        public Shift Shift { get; set; }
     }
 }
