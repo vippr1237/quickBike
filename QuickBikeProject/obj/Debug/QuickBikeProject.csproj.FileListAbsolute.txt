@@ -22,3 +22,6 @@ E:\Dai Hoc\Cong Nghe Phan Mem\QuickBikeProject\QuickBikeProject\obj\Debug\QuickB
 E:\Dai Hoc\Cong Nghe Phan Mem\QuickBikeProject\QuickBikeProject\obj\Debug\QuickBikeProject.form.formXemHD.resources
 E:\Dai Hoc\Cong Nghe Phan Mem\QuickBikeProject\QuickBikeProject\obj\Debug\QuickBikeProject.Login.resources
 E:\Dai Hoc\Cong Nghe Phan Mem\QuickBikeProject\QuickBikeProject\obj\Debug\QuickBikeProject.Migrations.update2.resources
+E:\Dai Hoc\Cong Nghe Phan Mem\QuickBikeProject\QuickBikeProject\obj\Debug\QuickBikeProject.form.formThongtinDN.resources
+E:\Dai Hoc\Cong Nghe Phan Mem\QuickBikeProject\QuickBikeProject\obj\Debug\QuickBikeProject.form.formChonKH.resources
+E:\Dai Hoc\Cong Nghe Phan Mem\QuickBikeProject\QuickBikeProject\obj\Debug\QuickBikeProject.form.formChonDV.resources

@@ -30,6 +30,8 @@ namespace QuickBikeProject
         private void InitializeComponent()
         {
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label26 = new System.Windows.Forms.Label();
+            this.tbTimNV = new System.Windows.Forms.TextBox();
             this.ngaysinhNV = new System.Windows.Forms.DateTimePicker();
             this.cBAdmin = new System.Windows.Forms.CheckBox();
             this.dgvNV = new System.Windows.Forms.DataGridView();
@@ -49,6 +51,8 @@ namespace QuickBikeProject
             this.editNVBtn = new System.Windows.Forms.Button();
             this.themNVBtn = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label25 = new System.Windows.Forms.Label();
+            this.tbTimKH = new System.Windows.Forms.TextBox();
             this.ngaySinhKH = new System.Windows.Forms.DateTimePicker();
             this.dgvGuest = new System.Windows.Forms.DataGridView();
             this.label21 = new System.Windows.Forms.Label();
@@ -80,7 +84,7 @@ namespace QuickBikeProject
             this.tbDonGia = new System.Windows.Forms.TextBox();
             this.tbLoaiXe = new System.Windows.Forms.TextBox();
             this.tbTenXe = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbTimXe = new System.Windows.Forms.TextBox();
             this.delete_bikeBtn = new System.Windows.Forms.Button();
             this.edit_bikeBtn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -111,6 +115,8 @@ namespace QuickBikeProject
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.label26);
+            this.tabPage4.Controls.Add(this.tbTimNV);
             this.tabPage4.Controls.Add(this.ngaysinhNV);
             this.tabPage4.Controls.Add(this.cBAdmin);
             this.tabPage4.Controls.Add(this.dgvNV);
@@ -138,6 +144,23 @@ namespace QuickBikeProject
             this.tabPage4.UseVisualStyleBackColor = true;
             this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
             // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(52, 17);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(73, 20);
+            this.label26.TabIndex = 21;
+            this.label26.Text = "Tim Kiem";
+            // 
+            // tbTimNV
+            // 
+            this.tbTimNV.Location = new System.Drawing.Point(131, 14);
+            this.tbTimNV.Name = "tbTimNV";
+            this.tbTimNV.Size = new System.Drawing.Size(242, 26);
+            this.tbTimNV.TabIndex = 20;
+            this.tbTimNV.TextChanged += new System.EventHandler(this.tbTimNV_TextChanged);
+            // 
             // ngaysinhNV
             // 
             this.ngaysinhNV.Location = new System.Drawing.Point(671, 328);
@@ -158,11 +181,11 @@ namespace QuickBikeProject
             // dgvNV
             // 
             this.dgvNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNV.Location = new System.Drawing.Point(20, 21);
+            this.dgvNV.Location = new System.Drawing.Point(20, 46);
             this.dgvNV.Name = "dgvNV";
             this.dgvNV.RowHeadersWidth = 62;
             this.dgvNV.RowTemplate.Height = 28;
-            this.dgvNV.Size = new System.Drawing.Size(501, 517);
+            this.dgvNV.Size = new System.Drawing.Size(517, 492);
             this.dgvNV.TabIndex = 17;
             this.dgvNV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNV_CellClick);
             // 
@@ -296,6 +319,8 @@ namespace QuickBikeProject
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.label25);
+            this.tabPage3.Controls.Add(this.tbTimKH);
             this.tabPage3.Controls.Add(this.ngaySinhKH);
             this.tabPage3.Controls.Add(this.dgvGuest);
             this.tabPage3.Controls.Add(this.label21);
@@ -322,6 +347,23 @@ namespace QuickBikeProject
             this.tabPage3.Text = "Khach Hang";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(36, 14);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(73, 20);
+            this.label25.TabIndex = 20;
+            this.label25.Text = "Tim Kiem";
+            // 
+            // tbTimKH
+            // 
+            this.tbTimKH.Location = new System.Drawing.Point(122, 14);
+            this.tbTimKH.Name = "tbTimKH";
+            this.tbTimKH.Size = new System.Drawing.Size(242, 26);
+            this.tbTimKH.TabIndex = 19;
+            this.tbTimKH.TextChanged += new System.EventHandler(this.tbTimKH_TextChanged);
+            // 
             // ngaySinhKH
             // 
             this.ngaySinhKH.Location = new System.Drawing.Point(660, 267);
@@ -332,11 +374,11 @@ namespace QuickBikeProject
             // dgvGuest
             // 
             this.dgvGuest.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvGuest.Location = new System.Drawing.Point(17, 23);
+            this.dgvGuest.Location = new System.Drawing.Point(17, 46);
             this.dgvGuest.Name = "dgvGuest";
             this.dgvGuest.RowHeadersWidth = 62;
             this.dgvGuest.RowTemplate.Height = 28;
-            this.dgvGuest.Size = new System.Drawing.Size(501, 517);
+            this.dgvGuest.Size = new System.Drawing.Size(512, 494);
             this.dgvGuest.TabIndex = 17;
             this.dgvGuest.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGuest_CellClick);
             // 
@@ -490,7 +532,7 @@ namespace QuickBikeProject
             this.tabPage2.Controls.Add(this.tbDonGia);
             this.tabPage2.Controls.Add(this.tbLoaiXe);
             this.tabPage2.Controls.Add(this.tbTenXe);
-            this.tabPage2.Controls.Add(this.textBox1);
+            this.tabPage2.Controls.Add(this.tbTimXe);
             this.tabPage2.Controls.Add(this.delete_bikeBtn);
             this.tabPage2.Controls.Add(this.edit_bikeBtn);
             this.tabPage2.Controls.Add(this.button1);
@@ -529,11 +571,11 @@ namespace QuickBikeProject
             // dvgXe
             // 
             this.dvgXe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgXe.Location = new System.Drawing.Point(15, 19);
+            this.dvgXe.Location = new System.Drawing.Point(15, 45);
             this.dvgXe.Name = "dvgXe";
             this.dvgXe.RowHeadersWidth = 62;
             this.dvgXe.RowTemplate.Height = 28;
-            this.dvgXe.Size = new System.Drawing.Size(501, 517);
+            this.dvgXe.Size = new System.Drawing.Size(497, 491);
             this.dvgXe.TabIndex = 4;
             this.dvgXe.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgXe_CellClick);
             // 
@@ -576,11 +618,11 @@ namespace QuickBikeProject
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(572, 98);
+            this.label3.Location = new System.Drawing.Point(36, 13);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 20);
+            this.label3.Size = new System.Drawing.Size(73, 20);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Ma Xe";
+            this.label3.Text = "Tim Kiem";
             // 
             // tbDonGia
             // 
@@ -603,13 +645,13 @@ namespace QuickBikeProject
             this.tbTenXe.Size = new System.Drawing.Size(242, 26);
             this.tbTenXe.TabIndex = 2;
             // 
-            // textBox1
+            // tbTimXe
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(658, 98);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(242, 26);
-            this.textBox1.TabIndex = 2;
+            this.tbTimXe.Location = new System.Drawing.Point(122, 13);
+            this.tbTimXe.Name = "tbTimXe";
+            this.tbTimXe.Size = new System.Drawing.Size(242, 26);
+            this.tbTimXe.TabIndex = 2;
+            this.tbTimXe.TextChanged += new System.EventHandler(this.tbTimXe_TextChanged);
             // 
             // delete_bikeBtn
             // 
@@ -854,7 +896,7 @@ namespace QuickBikeProject
         private System.Windows.Forms.TextBox tbDonGia;
         private System.Windows.Forms.TextBox tbLoaiXe;
         private System.Windows.Forms.TextBox tbTenXe;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbTimXe;
         private System.Windows.Forms.Button delete_bikeBtn;
         private System.Windows.Forms.Button edit_bikeBtn;
         private System.Windows.Forms.Button button1;
@@ -878,5 +920,9 @@ namespace QuickBikeProject
         private System.Windows.Forms.TextBox tbNgayDT;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Button xemHD;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.TextBox tbTimNV;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TextBox tbTimKH;
     }
 }

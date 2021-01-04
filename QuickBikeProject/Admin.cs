@@ -55,7 +55,7 @@ namespace QuickBikeProject
             }
             else
             {
-                textBox1.Text = dvgXe.Rows[e.RowIndex].Cells[0].Value.ToString();
+                tbTimXe.Text = dvgXe.Rows[e.RowIndex].Cells[0].Value.ToString();
                 tbTenXe.Text = dvgXe.Rows[e.RowIndex].Cells[1].Value.ToString();
                 tbLoaiXe.Text = dvgXe.Rows[e.RowIndex].Cells[2].Value.ToString();
                 ngaynhap.Value = (DateTime)dvgXe.Rows[e.RowIndex].Cells[3].Value;
@@ -65,7 +65,7 @@ namespace QuickBikeProject
         }
         private void edit_bikeBtn_Click(object sender, EventArgs e)
         {
-            var bike = quickBikeDB.Bike.SingleOrDefault(b => b.MaXe.ToString() == textBox1.Text);
+            var bike = quickBikeDB.Bike.SingleOrDefault(b => b.MaXe.ToString() == tbTimXe.Text);
             if (bike != null)
             {
                 bike.TenXe = tbTenXe.Text;
@@ -84,7 +84,7 @@ namespace QuickBikeProject
         }
         private void delete_bikeBtn_Click(object sender, EventArgs e)
         {
-            var bike = quickBikeDB.Bike.SingleOrDefault(b => b.MaXe.ToString() == textBox1.Text);
+            var bike = quickBikeDB.Bike.SingleOrDefault(b => b.MaXe.ToString() == tbTimXe.Text);
             if (bike != null)
             {
                 quickBikeDB.Bike.Remove(bike);
@@ -350,6 +350,26 @@ namespace QuickBikeProject
                 form.formXemHD formXemHD = new form.formXemHD(tbNgayDT.Text);
                 formXemHD.ShowDialog();
             }
+        }
+
+        private void tbTimXe_TextChanged(object sender, EventArgs e)
+        {
+            var bikes = quickBikeDB.Bike.Where(b => b.TenXe.Contains(tbTimXe.Text)
+                                            || b.LoaiXe.Contains(tbTimXe.Text));
+            dvgXe.DataSource = bikes.ToList();
+        }
+
+        private void tbTimKH_TextChanged(object sender, EventArgs e)
+        {
+            var guest = quickBikeDB.Guest.Where(g => g.TenKH.Contains(tbTimKH.Text)
+                                            || g.CMND.Contains(tbTimKH.Text));
+            dvgXe.DataSource = guest.ToList();
+        }
+
+        private void tbTimNV_TextChanged(object sender, EventArgs e)
+        {
+            var nv = quickBikeDB.User.Where(u => u.MaNV.Contains(tbTimNV.Text));
+            dvgXe.DataSource = nv.ToList();
         }
     }
 }

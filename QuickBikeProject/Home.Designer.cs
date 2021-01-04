@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.filterBtn = new System.Windows.Forms.Button();
+            this.tbSearch = new System.Windows.Forms.TextBox();
+            this.searchBtn = new System.Windows.Forms.Button();
+            this.freeRBtn = new System.Windows.Forms.RadioButton();
+            this.usedRBtn = new System.Windows.Forms.RadioButton();
+            this.allRBtn = new System.Windows.Forms.RadioButton();
             this.dgvXeThue = new System.Windows.Forms.DataGridView();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.timePick = new System.Windows.Forms.DateTimePicker();
-            this.label7 = new System.Windows.Forms.Label();
-            this.editBtn = new System.Windows.Forms.Button();
+            this.lbTotal = new System.Windows.Forms.Label();
+            this.clearBtn = new System.Windows.Forms.Button();
             this.billBtn = new System.Windows.Forms.Button();
             this.addBtn = new System.Windows.Forms.Button();
-            this.lvDV = new System.Windows.Forms.ListView();
             this.tbStatus = new System.Windows.Forms.TextBox();
             this.tbMaNV = new System.Windows.Forms.TextBox();
             this.tbMaKH = new System.Windows.Forms.TextBox();
@@ -59,6 +59,9 @@
             this.thongTinDangNhapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lbGreet = new System.Windows.Forms.Label();
             this.signOutBtn = new System.Windows.Forms.Button();
+            this.chonDVBtn = new System.Windows.Forms.Button();
+            this.chonKHBtn = new System.Windows.Forms.Button();
+            this.lvDV = new System.Windows.Forms.ListView();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvXeThue)).BeginInit();
             this.tabPage1.SuspendLayout();
@@ -69,67 +72,79 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.textBox6);
-            this.tabPage2.Controls.Add(this.button4);
-            this.tabPage2.Controls.Add(this.radioButton4);
-            this.tabPage2.Controls.Add(this.radioButton2);
-            this.tabPage2.Controls.Add(this.radioButton1);
+            this.tabPage2.Controls.Add(this.filterBtn);
+            this.tabPage2.Controls.Add(this.tbSearch);
+            this.tabPage2.Controls.Add(this.searchBtn);
+            this.tabPage2.Controls.Add(this.freeRBtn);
+            this.tabPage2.Controls.Add(this.usedRBtn);
+            this.tabPage2.Controls.Add(this.allRBtn);
             this.tabPage2.Controls.Add(this.dgvXeThue);
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1100, 658);
+            this.tabPage2.Size = new System.Drawing.Size(1104, 649);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Xe Thue";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // textBox6
+            // filterBtn
             // 
-            this.textBox6.Location = new System.Drawing.Point(598, 62);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(268, 26);
-            this.textBox6.TabIndex = 3;
+            this.filterBtn.Location = new System.Drawing.Point(614, 248);
+            this.filterBtn.Name = "filterBtn";
+            this.filterBtn.Size = new System.Drawing.Size(78, 34);
+            this.filterBtn.TabIndex = 4;
+            this.filterBtn.Text = "Loc";
+            this.filterBtn.UseVisualStyleBackColor = true;
+            this.filterBtn.Click += new System.EventHandler(this.filterBtn_Click);
             // 
-            // button4
+            // tbSearch
             // 
-            this.button4.Location = new System.Drawing.Point(884, 56);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(103, 38);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "Search";
-            this.button4.UseVisualStyleBackColor = true;
+            this.tbSearch.Location = new System.Drawing.Point(598, 62);
+            this.tbSearch.Name = "tbSearch";
+            this.tbSearch.Size = new System.Drawing.Size(268, 26);
+            this.tbSearch.TabIndex = 3;
             // 
-            // radioButton4
+            // searchBtn
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(614, 205);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(108, 24);
-            this.radioButton4.TabIndex = 1;
-            this.radioButton4.Text = "Chua thue";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.searchBtn.Location = new System.Drawing.Point(884, 56);
+            this.searchBtn.Name = "searchBtn";
+            this.searchBtn.Size = new System.Drawing.Size(103, 38);
+            this.searchBtn.TabIndex = 2;
+            this.searchBtn.Text = "Tim";
+            this.searchBtn.UseVisualStyleBackColor = true;
+            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
-            // radioButton2
+            // freeRBtn
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(614, 153);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(91, 24);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.Text = "Da thue";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.freeRBtn.AutoSize = true;
+            this.freeRBtn.Location = new System.Drawing.Point(614, 205);
+            this.freeRBtn.Name = "freeRBtn";
+            this.freeRBtn.Size = new System.Drawing.Size(108, 24);
+            this.freeRBtn.TabIndex = 1;
+            this.freeRBtn.Text = "Chua thue";
+            this.freeRBtn.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // usedRBtn
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(614, 107);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(78, 24);
-            this.radioButton1.TabIndex = 1;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Tat ca";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.usedRBtn.AutoSize = true;
+            this.usedRBtn.Location = new System.Drawing.Point(614, 153);
+            this.usedRBtn.Name = "usedRBtn";
+            this.usedRBtn.Size = new System.Drawing.Size(91, 24);
+            this.usedRBtn.TabIndex = 1;
+            this.usedRBtn.Text = "Da thue";
+            this.usedRBtn.UseVisualStyleBackColor = true;
+            // 
+            // allRBtn
+            // 
+            this.allRBtn.AutoSize = true;
+            this.allRBtn.Checked = true;
+            this.allRBtn.Location = new System.Drawing.Point(614, 107);
+            this.allRBtn.Name = "allRBtn";
+            this.allRBtn.Size = new System.Drawing.Size(78, 24);
+            this.allRBtn.TabIndex = 1;
+            this.allRBtn.TabStop = true;
+            this.allRBtn.Text = "Tat ca";
+            this.allRBtn.UseVisualStyleBackColor = true;
             // 
             // dgvXeThue
             // 
@@ -143,12 +158,14 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.lvDV);
+            this.tabPage1.Controls.Add(this.chonKHBtn);
+            this.tabPage1.Controls.Add(this.chonDVBtn);
             this.tabPage1.Controls.Add(this.timePick);
-            this.tabPage1.Controls.Add(this.label7);
-            this.tabPage1.Controls.Add(this.editBtn);
+            this.tabPage1.Controls.Add(this.lbTotal);
+            this.tabPage1.Controls.Add(this.clearBtn);
             this.tabPage1.Controls.Add(this.billBtn);
             this.tabPage1.Controls.Add(this.addBtn);
-            this.tabPage1.Controls.Add(this.lvDV);
             this.tabPage1.Controls.Add(this.tbStatus);
             this.tabPage1.Controls.Add(this.tbMaNV);
             this.tabPage1.Controls.Add(this.tbMaKH);
@@ -163,7 +180,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1100, 658);
+            this.tabPage1.Size = new System.Drawing.Size(1104, 649);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Hoa Don";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -175,32 +192,34 @@
             this.timePick.Size = new System.Drawing.Size(231, 26);
             this.timePick.TabIndex = 8;
             // 
-            // label7
+            // lbTotal
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(826, 556);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(27, 20);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "0d";
+            this.lbTotal.AutoSize = true;
+            this.lbTotal.Location = new System.Drawing.Point(826, 556);
+            this.lbTotal.Name = "lbTotal";
+            this.lbTotal.Size = new System.Drawing.Size(27, 20);
+            this.lbTotal.TabIndex = 7;
+            this.lbTotal.Text = "0d";
             // 
-            // editBtn
+            // clearBtn
             // 
-            this.editBtn.Location = new System.Drawing.Point(658, 594);
-            this.editBtn.Name = "editBtn";
-            this.editBtn.Size = new System.Drawing.Size(111, 43);
-            this.editBtn.TabIndex = 6;
-            this.editBtn.Text = "Sua";
-            this.editBtn.UseVisualStyleBackColor = true;
+            this.clearBtn.Location = new System.Drawing.Point(658, 594);
+            this.clearBtn.Name = "clearBtn";
+            this.clearBtn.Size = new System.Drawing.Size(111, 43);
+            this.clearBtn.TabIndex = 6;
+            this.clearBtn.Text = "Tao Moi";
+            this.clearBtn.UseVisualStyleBackColor = true;
+            this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
             // 
             // billBtn
             // 
-            this.billBtn.Location = new System.Drawing.Point(869, 545);
+            this.billBtn.Location = new System.Drawing.Point(902, 545);
             this.billBtn.Name = "billBtn";
             this.billBtn.Size = new System.Drawing.Size(111, 43);
             this.billBtn.TabIndex = 6;
             this.billBtn.Text = "Thanh Toan";
             this.billBtn.UseVisualStyleBackColor = true;
+            this.billBtn.Click += new System.EventHandler(this.billBtn_Click);
             // 
             // addBtn
             // 
@@ -212,17 +231,9 @@
             this.addBtn.UseVisualStyleBackColor = true;
             this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
-            // lvDV
-            // 
-            this.lvDV.HideSelection = false;
-            this.lvDV.Location = new System.Drawing.Point(658, 296);
-            this.lvDV.Name = "lvDV";
-            this.lvDV.Size = new System.Drawing.Size(321, 226);
-            this.lvDV.TabIndex = 5;
-            this.lvDV.UseCompatibleStateImageBehavior = false;
-            // 
             // tbStatus
             // 
+            this.tbStatus.Enabled = false;
             this.tbStatus.Location = new System.Drawing.Point(749, 215);
             this.tbStatus.Name = "tbStatus";
             this.tbStatus.Size = new System.Drawing.Size(264, 26);
@@ -237,6 +248,7 @@
             // 
             // tbMaKH
             // 
+            this.tbMaKH.Enabled = false;
             this.tbMaKH.Location = new System.Drawing.Point(749, 65);
             this.tbMaKH.Name = "tbMaKH";
             this.tbMaKH.Size = new System.Drawing.Size(264, 26);
@@ -244,6 +256,7 @@
             // 
             // tbMaHD
             // 
+            this.tbMaHD.Enabled = false;
             this.tbMaHD.Location = new System.Drawing.Point(749, 15);
             this.tbMaHD.Name = "tbMaHD";
             this.tbMaHD.Size = new System.Drawing.Size(264, 26);
@@ -312,6 +325,7 @@
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(632, 637);
             this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // tabControl1
             // 
@@ -320,18 +334,19 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 35);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1108, 691);
+            this.tabControl1.Size = new System.Drawing.Size(1112, 682);
             this.tabControl1.TabIndex = 3;
             // 
             // menuStrip1
             // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.adminToolStripMenuItem,
             this.thongTinDangNhapToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1124, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1129, 33);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -347,6 +362,7 @@
             this.thongTinDangNhapToolStripMenuItem.Name = "thongTinDangNhapToolStripMenuItem";
             this.thongTinDangNhapToolStripMenuItem.Size = new System.Drawing.Size(195, 29);
             this.thongTinDangNhapToolStripMenuItem.Text = "Thong tin dang nhap";
+            this.thongTinDangNhapToolStripMenuItem.Click += new System.EventHandler(this.thongTinDangNhapToolStripMenuItem_Click);
             // 
             // lbGreet
             // 
@@ -367,11 +383,40 @@
             this.signOutBtn.UseVisualStyleBackColor = true;
             this.signOutBtn.Click += new System.EventHandler(this.signOutBtn_Click);
             // 
+            // chonDVBtn
+            // 
+            this.chonDVBtn.Location = new System.Drawing.Point(985, 390);
+            this.chonDVBtn.Name = "chonDVBtn";
+            this.chonDVBtn.Size = new System.Drawing.Size(87, 56);
+            this.chonDVBtn.TabIndex = 9;
+            this.chonDVBtn.Text = "Chinh Sua";
+            this.chonDVBtn.UseVisualStyleBackColor = true;
+            this.chonDVBtn.Click += new System.EventHandler(this.chonDVBtn_Click);
+            // 
+            // chonKHBtn
+            // 
+            this.chonKHBtn.Location = new System.Drawing.Point(1019, 58);
+            this.chonKHBtn.Name = "chonKHBtn";
+            this.chonKHBtn.Size = new System.Drawing.Size(72, 41);
+            this.chonKHBtn.TabIndex = 10;
+            this.chonKHBtn.Text = "Chon";
+            this.chonKHBtn.UseVisualStyleBackColor = true;
+            this.chonKHBtn.Click += new System.EventHandler(this.chonKHBtn_Click);
+            // 
+            // lvDV
+            // 
+            this.lvDV.HideSelection = false;
+            this.lvDV.Location = new System.Drawing.Point(658, 300);
+            this.lvDV.Name = "lvDV";
+            this.lvDV.Size = new System.Drawing.Size(318, 215);
+            this.lvDV.TabIndex = 11;
+            this.lvDV.UseCompatibleStateImageBehavior = false;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1124, 729);
+            this.ClientSize = new System.Drawing.Size(1129, 720);
             this.Controls.Add(this.signOutBtn);
             this.Controls.Add(this.lbGreet);
             this.Controls.Add(this.tabControl1);
@@ -397,19 +442,18 @@
         #endregion
 
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.TextBox tbSearch;
+        private System.Windows.Forms.Button searchBtn;
+        private System.Windows.Forms.RadioButton freeRBtn;
+        private System.Windows.Forms.RadioButton usedRBtn;
+        private System.Windows.Forms.RadioButton allRBtn;
         private System.Windows.Forms.DataGridView dgvXeThue;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.DateTimePicker timePick;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button editBtn;
+        private System.Windows.Forms.Label lbTotal;
+        private System.Windows.Forms.Button clearBtn;
         private System.Windows.Forms.Button billBtn;
         private System.Windows.Forms.Button addBtn;
-        private System.Windows.Forms.ListView lvDV;
         private System.Windows.Forms.TextBox tbStatus;
         private System.Windows.Forms.TextBox tbMaNV;
         private System.Windows.Forms.TextBox tbMaKH;
@@ -427,6 +471,10 @@
         private System.Windows.Forms.ToolStripMenuItem thongTinDangNhapToolStripMenuItem;
         private System.Windows.Forms.Label lbGreet;
         private System.Windows.Forms.Button signOutBtn;
+        private System.Windows.Forms.Button filterBtn;
+        private System.Windows.Forms.Button chonDVBtn;
+        private System.Windows.Forms.Button chonKHBtn;
+        private System.Windows.Forms.ListView lvDV;
     }
 }
 

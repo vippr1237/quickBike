@@ -67,6 +67,7 @@ namespace QuickBikeProject
             // 
             this.tbMK.Location = new System.Drawing.Point(223, 125);
             this.tbMK.Name = "tbMK";
+            this.tbMK.PasswordChar = '*';
             this.tbMK.Size = new System.Drawing.Size(252, 26);
             this.tbMK.TabIndex = 1;
             // 
@@ -74,7 +75,7 @@ namespace QuickBikeProject
             // 
             this.loginBtn.Location = new System.Drawing.Point(223, 217);
             this.loginBtn.Name = "loginBtn";
-            this.loginBtn.Size = new System.Drawing.Size(102, 45);
+            this.loginBtn.Size = new System.Drawing.Size(111, 54);
             this.loginBtn.TabIndex = 2;
             this.loginBtn.Text = "Dang Nhap";
             this.loginBtn.UseVisualStyleBackColor = true;
@@ -82,9 +83,9 @@ namespace QuickBikeProject
             // 
             // exitBtn
             // 
-            this.exitBtn.Location = new System.Drawing.Point(383, 217);
+            this.exitBtn.Location = new System.Drawing.Point(370, 217);
             this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(92, 45);
+            this.exitBtn.Size = new System.Drawing.Size(105, 54);
             this.exitBtn.TabIndex = 2;
             this.exitBtn.Text = "Thoat";
             this.exitBtn.UseVisualStyleBackColor = true;

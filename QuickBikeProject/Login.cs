@@ -17,8 +17,9 @@ namespace QuickBikeProject
         public Login()
         {
             InitializeComponent();
-       
         }
+
+
         public Login(SendMessage sender)
         {
             InitializeComponent();
@@ -37,18 +38,28 @@ namespace QuickBikeProject
                 if (user.PassWord != tbMK.Text)
                 {
                     noti.Text = "Sai mat khau";
+                    clear();
                 }
                 else
                 {
                     DialogResult = DialogResult.OK;
                     this.send(user.MaNV);
+                    clear();
                 }
             }
+            if (DialogResult == DialogResult.OK)
+                this.Close();
         }
 
         private void exitBtn_Click(object sender, EventArgs e)
         {
+            DialogResult = DialogResult.No;
             this.Close();
+        }
+        private void clear()
+        {
+            tbMK.Clear();
+            tbTDN.Clear();
         }
     }
 }
